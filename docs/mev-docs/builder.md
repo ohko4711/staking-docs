@@ -48,7 +48,7 @@ services:
       - --builder.beacon_endpoints=http://beacon:5052
       - --builder.genesis_fork_version=0x10000001
       - --builder.bellatrix_fork_version=0x30000001
-      - --builder.genesis_validators_root=0x9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1
+      - --builder.genesis_validators_root=0x6e1583608783377f139b7bac661aff7d5cca656af16ac34f9d0eda27dbf1316c
       - --builder.secret_key=0xa804b34c7f4e95f284b4fa4acb10b4c803789aed629f6e4517a5346fff4f9072
       - --builder.remote_relay_endpoint=http://<relay-ip>:9062
       - --builder.secondary_remote_relay_endpoints=http://<relay-ip>:9062/
