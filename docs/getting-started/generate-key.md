@@ -58,7 +58,7 @@ The Endurance mainnet uses these parameters to generate keys. If you are a profe
 
 | Name | Value |
 | --- | --- |
-| Genesis validator root | `0x9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1` |
+| Genesis validator root | `0x6e1583608783377f139b7bac661aff7d5cca656af16ac34f9d0eda27dbf1316c` |
 | Genesis fork version | `0x10000001` |
 
 
