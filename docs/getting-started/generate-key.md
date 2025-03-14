@@ -35,7 +35,7 @@ validator_keys/
 The important thing is to make sure the `fork_version` is correct in the file starting with `deposit_data-`. Its value must be equal to `10000001`. You can verify this value with the `jq` command like this:
 
 ```
-jq '.[].fork_version' validator_keys/deposit_data-1716876797.jso
+jq '.[].fork_version' validator_keys/deposit_data-1716876797.json
 ```
 
 It will output:

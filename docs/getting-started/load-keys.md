@@ -32,7 +32,7 @@ validator_keys_secrets/
 
 The filename is the public key in your keystore file, and the file content is your password:
 
-```vash
+```bash
 mainnet-reth-lighthouse# cat validator_keys_secrets/0xb8d4524f48828ff1b878918c2b403a9d693ffd078901b6b41b28fd76fed8abda12ec2e8bafe3f9b9b80322c238a7412b 
 12345678
 ```
