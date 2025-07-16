@@ -10,7 +10,9 @@ sidebar_position: 150
 | --- | --- |
 | Upgrade Time | Wed Aug 20 2025 06:00:00 GMT+0000 |
 | Upgrade Epoch | 120150 |
+| Upgrade Block | ~3,828,237 |
 
+The upgrade should be completed before this deadline, and we recommend doing it **as early as possible** to account for any unforeseen issues.
 
 ## 2. How to upgrade
 
@@ -32,7 +34,7 @@ f4c5e8218ee8843b635427b8f10a4dd6475bfaa1363315c33a1bdcffe9cc4b96 chainspec.json
 > sha256sum besu.json
 389a9059a52a8b0b3a4cafbb1d8461027d2ea6d0b6efedde4d62d4496d035d6f besu.json
 >sha256sum  config.yaml
-012c19c0333cc0d583f1441fe114c33325297e2f85bff23f59c79200e2bbe600  config.yaml
+0170e5483626880589de6d8f4bd5dd56df26688aeb2470f596773b927a73295c  config.yaml
 
 ```
 
@@ -219,3 +221,7 @@ You can check the latest slot information for the beacon node on this Dora Explo
 
 solo staker use [ethpillar-endurance](https://github.com/OpenFusionist/EthPillar-Endurance) to upgrade, it greatly simplifies the upgrade process.
 just pull the latest ethpillar and run it 
+
+## 3. Technical Support
+If you have any questions about upgrade, feel free to ask:
+- [Discord](https://discord.com/channels/926691694680870982/1212701304787566592)
