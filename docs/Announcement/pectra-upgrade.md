@@ -4,6 +4,8 @@ sidebar_position: 150
 
 # Endurance Network's Pectra Hardfork
 
+If you are a regular Web3 user for Endurance Network, you can safely ignore this section. The specific upgrade guide below is intended for node operators.
+
 ## 1.Upgrade basic info
 
 | Item | Value |
@@ -13,6 +15,8 @@ sidebar_position: 150
 | Upgrade Block | ~3,828,237 |
 
 The upgrade should be completed before this deadline, and we recommend doing it **as early as possible** to account for any unforeseen issues.
+
+for more technical details about Pectra fork, please refer to [High-level Pectra Fork overview](https://ethereum.org/en/roadmap/pectra/)
 
 ## 2. How to upgrade
 
@@ -208,6 +212,14 @@ docker run \
   
 ```
 
+Check the docker logs If there is similar output, it indicates a successful upgrade, otherwise you can provide detailed error logs to our engineering team for help.
+```
+docker logs -f --tail 100 geth-execution 2>&1 | grep 'Prague'
+INFO [07-16|09:17:36.478] Ready for fork activation                fork=Prague date="20 Aug 25 06:00 UTC" remaining=836h42m24s timestamp=1,755,669,600
+INFO [07-16|09:20:48.271] Ready for fork activation                fork=Prague date="20 Aug 25 06:00 UTC" remaining=836h39m12s timestamp=1,755,669,600
+INFO [07-16|09:23:48.289] Ready for fork activation                fork=Prague date="20 Aug 25 06:00 UTC" remaining=836h36m12s timestamp=1,755,669,600
+```
+
 You can check the latest block information on this Block Explorer to ensure your Execution Layer (EL) node block syncs to the latest block:
 
 - https://explorer-endurance.fusionist.io/
@@ -220,7 +232,21 @@ You can check the latest slot information for the beacon node on this Dora Explo
 ### for Solo Staker
 
 solo staker use [ethpillar-endurance](https://github.com/OpenFusionist/EthPillar-Endurance) to upgrade, it greatly simplifies the upgrade process.
-just pull the latest ethpillar and run it 
+opening EthPillar in terminal:
+```
+ethpillar
+```
+1. Navigate to System Administration > Update EthPillar and then quit and relaunch ethpillar
+2. Navigate to Execution Client > Update to latest release
+3. Navigate to Consensus Client > Update to latest release
+4. Navigate to MEV-Boost > Update to latest release
+
+Check the logs. If there is similar output, it indicates a successful upgrade,otherwise you need to check the logs for more details and get help from our Discord.
+```
+journalctl -u execution --since today  | grep 'Prague'
+
+Jul 16 08:06:22 dev reth[3417514]: - Prague                           @1755669600
+```
 
 ## 3. Technical Support
 If you have any questions about upgrade, feel free to ask:
