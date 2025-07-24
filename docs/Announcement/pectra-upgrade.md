@@ -150,7 +150,9 @@ You need to be running these client versions or any later stable release before 
 
 - [go-ethereum (Geth) version 1.15.10](https://github.com/ethereum/go-ethereum/releases/tag/v1.15.10)
 
-For Geth, you need to stop the node and then re-execute the `init` command for the configuration to take effect. Here's an example, adjust according to the actual path:
+For Geth, you need to stop the node and then re-execute the `init` command for the configuration to take effect. below is a docker-compose example:
+
+> **IMPORTANT:** Make sure your machine's RAM  >=**32GB**, CPU>=4core, Disk space >=250GB for Full node, >=500GB for Archive node. During the actual update process, you only need to update the geth version in your existing startup script/docker-compose file, e.g., from `v1.14.10` -> `v1.15.10`.
 
 ```bash
 # 1. init
@@ -160,7 +162,7 @@ docker run \
   -v $(pwd)/execution-data:/execution-data \
   -v $(pwd)/../../el-cl-genesis-data:/el-cl-genesis-data \
   ethereum/client-go:v1.15.10 \
-  --state.scheme=hash \
+  --state.scheme=path \
   --datadir=/execution-data \
   init \
   /el-cl-genesis-data/custom_config_data/genesis.json
