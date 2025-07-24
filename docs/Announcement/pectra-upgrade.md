@@ -150,9 +150,9 @@ You need to be running these client versions or any later stable release before 
 
 - [go-ethereum (Geth) version 1.15.10](https://github.com/ethereum/go-ethereum/releases/tag/v1.15.10)
 
-For Geth, you need to stop the node and then re-execute the `init` command for the configuration to take effect. below is andocker-compose for reference:
+For Geth, you need to stop the node and then re-execute the `init` command for the configuration to take effect. below is a docker-compose example:
 
-> **IMPORTANT:** During the actual update process, you only need to update the geth version in your existing startup script/docker-compose file, e.g., from `v1.14.10` -> `v1.15.10`.
+> **IMPORTANT:** Make sure your machine's RAM  >=**32GB**, CPU>=4core, Disk space >=250GB for Full node, >=500GB for Archive node. During the actual update process, you only need to update the geth version in your existing startup script/docker-compose file, e.g., from `v1.14.10` -> `v1.15.10`.
 
 ```bash
 # 1. init
