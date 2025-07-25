@@ -137,9 +137,9 @@ cp network_config/config.yaml /path/to/your/config.yaml
 
 #### Update client version
 
-You need to be running these client versions or any later stable release before the Pectra fork epoch.
+You need to be running consensus,validator,execution client version or any later stable release before the Pectra fork epoch.
 
-**For consensus/validator clients:**
+**For consensus & validator clients:**
 
 - [Lighthouse version 7.0.0](https://github.com/sigp/lighthouse/releases/tag/v7.0.0)
     - If the previous launch included parameters: `--http-allow-sync-stalled` ,**remove** it. ref:https://github.com/sigp/lighthouse/issues/5430
